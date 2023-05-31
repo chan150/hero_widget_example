@@ -43,9 +43,10 @@ class TestPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: const Material(
-        child: Hero(
-          tag: 'tag',
+      body: const Hero(
+        tag: 'tag',
+        child: Material(
+          type: MaterialType.transparency,
           child: Text(
             'test',
             style: TextStyle(fontSize: 30),
@@ -115,9 +116,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Material(
-              child: Hero(
-                tag: 'tag',
+            Hero(
+              tag: 'tag',
+              child: Material(
+                type: MaterialType.transparency,
                 child: Text('hello world'),
               ),
             ),
